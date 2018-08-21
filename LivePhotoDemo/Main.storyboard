@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iny-vh-Iuv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0pw-hM-2ta">
+            <objects>
+                <navigationController id="Iny-vh-Iuv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xrm-P2-w8i">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qnf-hU-1X2" kind="relationship" relationship="rootViewController" id="Zo0-u3-vFq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1w-5W-fV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1335" y="206"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="M7J-hO-Ygg">
+            <objects>
+                <viewController id="qnf-hU-1X2" customClass="RootViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zga-dD-3xZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kw6-uA-grL">
+                                <rect key="frame" x="142" y="294" width="90" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.61825280940000005" blue="0.088455048930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JOf-r0-sm2"/>
+                                    <constraint firstAttribute="width" constant="90" id="ceQ-4y-TNi"/>
+                                </constraints>
+                                <state key="normal" title="录制视频"/>
+                                <connections>
+                                    <action selector="action:" destination="qnf-hU-1X2" eventType="touchUpInside" id="gpW-Ps-ERJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ys-CN-zoD">
+                                <rect key="frame" x="142" y="214" width="90" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.61825280940000005" blue="0.088455048930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="g17-z8-o75"/>
+                                    <constraint firstAttribute="width" constant="90" id="yGr-Hy-rI9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="获取视频"/>
+                                <connections>
+                                    <action selector="action:" destination="qnf-hU-1X2" eventType="touchUpInside" id="xwr-2T-xwZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kw6-uA-grL" firstAttribute="centerX" secondItem="oik-eH-AC5" secondAttribute="centerX" id="Gjy-DI-GB0"/>
+                            <constraint firstItem="Kw6-uA-grL" firstAttribute="top" secondItem="9ys-CN-zoD" secondAttribute="bottom" constant="50" id="fFm-Cy-N0O"/>
+                            <constraint firstItem="9ys-CN-zoD" firstAttribute="centerX" secondItem="oik-eH-AC5" secondAttribute="centerX" id="uzG-w9-0qq"/>
+                            <constraint firstItem="9ys-CN-zoD" firstAttribute="top" secondItem="oik-eH-AC5" secondAttribute="top" constant="150" id="xNK-5J-S9M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oik-eH-AC5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PLD-8a-e14"/>
+                    <connections>
+                        <outlet property="getVideo" destination="9ys-CN-zoD" id="JWQ-4d-jfX"/>
+                        <outlet property="makeVideo" destination="Kw6-uA-grL" id="HSP-gp-Wzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8Z-Sk-dBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583.20000000000005" y="205.54722638680661"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBS-5v-qRj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IBS-5v-qRj" secondAttribute="height" multiplier="16:9" id="69v-db-87D"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-Zi-Ef9">
+                                <rect key="frame" x="13" y="216" width="349" height="31"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.046772837529804212" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="APU-lT-GMF"/>
+                                    <action selector="sliderValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zau-M1-hUF"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycP-xn-mcQ">
+                                <rect key="frame" x="113" y="251" width="150" height="267"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3fK-7P-bKX">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="267"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ycP-xn-mcQ" secondAttribute="height" multiplier="375:667" id="1gW-kI-5sZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="3fK-7P-bKX" secondAttribute="bottom" id="8ea-Fr-dQT"/>
+                                    <constraint firstAttribute="trailing" secondItem="3fK-7P-bKX" secondAttribute="trailing" id="JXd-PT-TFW"/>
+                                    <constraint firstItem="3fK-7P-bKX" firstAttribute="top" secondItem="ycP-xn-mcQ" secondAttribute="top" id="dxy-mS-GsU"/>
+                                    <constraint firstItem="3fK-7P-bKX" firstAttribute="leading" secondItem="ycP-xn-mcQ" secondAttribute="leading" id="iFj-wO-Zgo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-tP-XfC">
+                                <rect key="frame" x="40" y="548" width="120" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.61825280940000005" blue="0.088455048930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="BxG-PO-xwg"/>
+                                    <constraint firstAttribute="height" constant="30" id="U3W-hM-hpK"/>
+                                </constraints>
+                                <state key="normal" title="预览Live Photo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveLivePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eh4-2X-x3x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVz-E6-la8">
+                                <rect key="frame" x="215" y="548" width="120" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.61825280940000005" blue="0.088455048930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="KNj-2Q-qDk"/>
+                                    <constraint firstAttribute="height" constant="30" id="ODl-xe-6io"/>
+                                </constraints>
+                                <state key="normal" title="保存Live Photo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveLivePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXm-aG-t9Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nAe-Zi-Ef9" firstAttribute="top" secondItem="IBS-5v-qRj" secondAttribute="bottom" constant="-15" id="8wN-53-cnT"/>
+                            <constraint firstItem="3nz-tP-XfC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="INK-qJ-LQO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AVz-E6-la8" secondAttribute="trailing" constant="40" id="KYT-NK-D6M"/>
+                            <constraint firstItem="ycP-xn-mcQ" firstAttribute="top" secondItem="IBS-5v-qRj" secondAttribute="bottom" constant="20" id="Q0q-gk-a6w"/>
+                            <constraint firstItem="nAe-Zi-Ef9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Zhv-u1-9py"/>
+                            <constraint firstItem="ycP-xn-mcQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a3o-w2-0PW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nAe-Zi-Ef9" secondAttribute="trailing" constant="15" id="hub-kD-OMP"/>
+                            <constraint firstItem="AVz-E6-la8" firstAttribute="top" secondItem="ycP-xn-mcQ" secondAttribute="bottom" constant="30" id="joi-uT-AmJ"/>
+                            <constraint firstItem="ycP-xn-mcQ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.4" id="kOQ-bf-C7W"/>
+                            <constraint firstItem="3nz-tP-XfC" firstAttribute="top" secondItem="ycP-xn-mcQ" secondAttribute="bottom" constant="30" id="lf0-hp-vIb"/>
+                            <constraint firstItem="IBS-5v-qRj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m2i-Nz-iTt"/>
+                            <constraint firstItem="IBS-5v-qRj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nJg-lD-wJx"/>
+                            <constraint firstItem="IBS-5v-qRj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nSd-V7-WOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IBS-5v-qRj" secondAttribute="trailing" id="tda-cN-XYV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="coverImage" destination="3fK-7P-bKX" id="9Mt-zN-bNu"/>
+                        <outlet property="livePhotoBackView" destination="ycP-xn-mcQ" id="cMd-tM-XXQ"/>
+                        <outlet property="playerView" destination="IBS-5v-qRj" id="J1s-qx-SBB"/>
+                        <outlet property="slider" destination="nAe-Zi-Ef9" id="hci-Wf-qqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="206"/>
+        </scene>
+    </scenes>
+</document>

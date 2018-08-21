@@ -1,0 +1,20 @@
+PODS:
+  - ICGVideoTrimmer (1.1)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - ICGVideoTrimmer
+  - SVProgressHUD (~> 2.2.5)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ICGVideoTrimmer
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  ICGVideoTrimmer: 1f54de0595af56af2a406f20cdb33c1c440d15cd
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: a13833d5b1540466f70074dd5b4704b2faa39bc4
+
+COCOAPODS: 1.5.3

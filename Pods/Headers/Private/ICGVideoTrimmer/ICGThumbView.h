@@ -1,0 +1,1 @@
+../../../ICGVideoTrimmer/Source/ICGThumbView.h
